@@ -4,22 +4,23 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
-} from "remix";
-import type { MetaFunction } from "remix";
+  ScrollRestoration,
+} from 'remix'
+import type { MetaFunction } from 'remix'
 
-import globalStyles from "./styles/global.css"
-import tailwindStyles from "./styles/tailwind.css"
+import globalStyles from './styles/global.css'
+import tailwindStyles from './styles/tailwind.css'
 
 export function links() {
-  return [{ rel: "stylesheet", href: globalStyles },
-  { rel: "stylesheet", href: tailwindStyles }
-]
+  return [
+    { rel: 'stylesheet', href: globalStyles },
+    { rel: 'stylesheet', href: tailwindStyles },
+  ]
 }
 
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
-};
+  return { title: 'New Remix App' }
+}
 
 export default function App() {
   return (
@@ -37,5 +38,5 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }
